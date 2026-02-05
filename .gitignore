@@ -1,0 +1,96 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Model files and caches
+models/
+*.pth
+*.bin
+*.onnx
+.cache/
+huggingface_cache/
+
+# Data directories
+data/audio/*
+!data/audio/.gitkeep
+data/postgres/*
+!data/postgres/.gitkeep
+data/n8n/*
+!data/n8n/.gitkeep
+data/ollama/*
+!data/ollama/.gitkeep
+data/evaluation/*
+!data/evaluation/.gitkeep
+data/sample_audio/*
+!data/sample_audio/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Evaluation results (optional, comment out if you want to track)
+results/
+!results/.gitkeep
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Database files (SQLite)
+*.db
+*.sqlite
+*.sqlite3

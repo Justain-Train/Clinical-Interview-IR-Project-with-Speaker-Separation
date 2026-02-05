@@ -1,0 +1,41 @@
+# Retrieval Configuration
+
+# Search Mode
+search:
+  default_mode: "hybrid"  # Options: semantic, keyword, hybrid
+  top_k: 10
+  
+# Hybrid Search Weights
+hybrid:
+  semantic_weight: 0.7
+  keyword_weight: 0.3
+  
+# Semantic Search
+semantic:
+  embedding_model: "all-MiniLM-L6-v2"
+  similarity_metric: "cosine"
+  min_similarity: 0.3  # Filter out very low scores
+  
+# Keyword Search
+keyword:
+  algorithm: "bm25"  # or "tfidf"
+  k1: 1.5            # BM25 parameter
+  b: 0.75            # BM25 parameter
+  
+# Re-ranking
+reranking:
+  enabled: true
+  model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  rerank_top_k: 20   # Retrieve more, then re-rank to final top_k
+  
+# Filters
+filters:
+  default_speaker: "ALL"  # Options: ALL, PATIENT, CLINICIAN
+  
+# LLM Explanation
+llm:
+  enabled: false  # Enable for answer generation
+  provider: "ollama"
+  model: "llama-3.1-8b"
+  max_tokens: 200
+  temperature: 0.3  # Lower = more deterministic

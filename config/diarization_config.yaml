@@ -1,0 +1,27 @@
+# Diarization Configuration
+
+# Pyannote Model
+model:
+  name: "pyannote/speaker-diarization"
+  version: "3.1"
+  device: "cpu"  # or "cuda" if GPU available
+
+# Segmentation Parameters
+segmentation:
+  min_duration_on: 0.5    # Minimum speech duration (seconds)
+  min_duration_off: 0.3   # Minimum silence duration (seconds)
+
+# Speaker Detection
+speakers:
+  min_speakers: null      # Auto-detect
+  max_speakers: 5         # Maximum expected speakers
+  
+# Clinical Interview Optimizations
+clinical:
+  expected_speakers: 2    # Typically patient + clinician
+  optimize_for_dialogue: true
+  
+# Output
+output:
+  format: "json"
+  include_confidence: true

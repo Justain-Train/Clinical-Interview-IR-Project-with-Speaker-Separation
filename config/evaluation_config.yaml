@@ -1,0 +1,41 @@
+# Evaluation Configuration
+
+# Dataset
+dataset:
+  name: "test_set_v1"
+  path: "./data/evaluation/test_set_v1.json"
+  
+# Metrics to Compute
+metrics:
+  - precision@k
+  - recall@k
+  - mean_average_precision
+  - ndcg@k
+  
+# K Values
+k_values: [1, 3, 5, 10]
+
+# Speaker Modes
+speaker_modes:
+  - ALL
+  - PATIENT
+  - CLINICIAN
+  
+# Retrieval Configuration
+retrieval:
+  search_mode: "hybrid"
+  rerank: true
+  top_k: 10
+  
+# Output
+output:
+  format: "json"  # Options: json, csv, markdown
+  save_per_query_results: true
+  generate_report: true
+  report_format: "markdown"
+  
+# Performance Targets
+targets:
+  precision_at_5: 0.65
+  recall_at_5: 0.70
+  mean_average_precision: 0.65

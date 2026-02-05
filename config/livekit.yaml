@@ -1,0 +1,50 @@
+# LiveKit Server Configuration
+
+# Server
+port: 7880
+bind_addresses:
+  - "0.0.0.0"
+
+# RTC (Real-Time Communication)
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  use_external_ip: false
+
+# API Keys (for development only - use secure keys in production)
+keys:
+  devkey: secret
+
+# Room Settings
+room:
+  auto_create: true
+  empty_timeout: 300  # Close room after 5 minutes of being empty
+  max_participants: 10
+
+# Audio Settings
+audio:
+  # Enable speaker separation
+  enable_speaker_separation: true
+  # Audio codec
+  codec: opus
+  # Sample rate
+  sample_rate: 48000
+
+# Webhooks
+webhook:
+  # Set this to your n8n webhook URL
+  # url: "http://host.docker.internal:5678/webhook/livekit"
+  # Events to send
+  # events:
+  #   - room_created
+  #   - room_ended
+  #   - participant_joined
+  #   - participant_left
+  #   - track_published
+  #   - track_unpublished
+
+# Logging
+logging:
+  level: info  # debug, info, warn, error
+  sample: false
