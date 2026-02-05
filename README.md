@@ -208,24 +208,6 @@ Return results
 
 ---
 
-## ⚠️ Important Constraints
-
-- **FREE tier only**: Whisper local/API free tier, Pyannote community model, open-source vector DB
-- **No medical advice**: System is for IR research and education only
-- **n8n for orchestration only**: ML logic lives in Python
-- **Reproducible**: Fixed configs, seeded evaluation, documented protocols
-
----
-
-## 📊 Why This Architecture?
-
-**Modularity**: Each component has one clear responsibility  
-**Unification**: Offline and live paths share 80% of code  
-**Evaluation-friendly**: Single evaluation pipeline tests both modes  
-**Course-ready**: Clear separation allows incremental teaching  
-**Speaker-aware**: First-class support for patient/clinician distinction  
-
----
 
 ## 📝 License
 
