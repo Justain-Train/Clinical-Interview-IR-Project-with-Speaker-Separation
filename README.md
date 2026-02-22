@@ -1,5 +1,5 @@
 # Intelligent Clinical Interview Analysis, Summarization & Retrieval System
-## with Speaker Separation (Hybrid Architecture - Option C)
+## with Speaker Separation 
 
 An academic information retrieval system that processes clinical interviews through both offline and live ingestion paths, converging into a unified retrieval, ranking, and evaluation pipeline.
 
